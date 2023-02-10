@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.Arrays;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
-@EnableScheduling
+@EnableJpaRepositories("com.vorobev4.back")
 public class BackApplication {
 
 	public static void main(String[] args) {
